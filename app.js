@@ -12,6 +12,10 @@ function main() {
 
     const renderer = new THREE.WebGLRender({ canvas })
     renderer.setSize(width, height)
+
+    const scene = new THREE.Scene()
+    const loader = new THHREE.TextureLoader()
+    loader.load('https://threejs.org/manual/examples/resources/images/equirectangularmaps/tears_of_steel_bridge_2k.jpg')
 }
 
 main()
