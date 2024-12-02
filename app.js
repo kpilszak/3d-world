@@ -15,7 +15,11 @@ function main() {
 
     const scene = new THREE.Scene()
     const loader = new THHREE.TextureLoader()
-    loader.load('https://threejs.org/manual/examples/resources/images/equirectangularmaps/tears_of_steel_bridge_2k.jpg')
+    const texture = loader.load(
+        'https://threejs.org/manual/examples/resources/images/equirectangularmaps/tears_of_steel_bridge_2k.jpg',
+    () => {
+        scene.background = texture
+    })
 }
 
 main()
